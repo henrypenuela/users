@@ -18,7 +18,7 @@ async function cargarTareas(){
   for(let tarea of tareas)
   {
     let botonEliminar = '<a href="#" onclick="eliminartarea('+ tarea.id +')" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a>';
-    let tareaHtml = '<tr><td>'+ tarea.id +'</td><td>'+ tarea.actividad +'</td><td>'+ tarea.fecha +'</td></tr>';
+    let tareaHtml = '<tr><td>'+ tarea.id +'</td><td>'+ tarea.actividad +'</td><td>'+ tarea.fecha +'</td><td>'+ botonEliminar +'</td></tr>';
     listadoHtml += tareaHtml;
   }
   document.querySelector('#tareas tbody').outerHTML = listadoHtml;
